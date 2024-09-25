@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/navtest.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">HLIS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link btn btn-custom" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom" href="vision.html">Vision</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom" href="#">Our Institution</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom" href="#">Curriculum</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-custom" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggler = document.querySelector('.navbar-toggler');
+        const icon = toggler.querySelector('i');  // The icon inside the button
+
+        toggler.addEventListener('click', function () {
+            const expanded = toggler.getAttribute('aria-expanded') === 'true';
+            if (expanded) {
+                icon.classList.remove('fa-bars');   // Remove the hamburger icon
+                icon.classList.add('fa-times');     // Add the X icon
+            } else {
+                icon.classList.remove('fa-times');  // Remove the X icon
+                icon.classList.add('fa-bars');      // Add the hamburger icon
+            }
+        });
+    });
+</script>
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+</html>

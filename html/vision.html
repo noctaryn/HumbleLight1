@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision - Humble Light International School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation styling */
+        .navbar {
+            background-color: #001f3f;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff5c4a;
+        }
+
+        /* Vision Header */
+        .vision-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('vision-banner.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .vision-header h1 {
+            font-size: 3.5rem;
+            animation: fadeIn 2s;
+        }
+
+        .vision-header p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            animation: fadeInUp 2s;
+        }
+
+        /* Vision Content */
+        .vision-content {
+            padding: 4rem 0;
+        }
+
+        .vision-content h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: #001f3f;
+        }
+
+        .vision-content p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .vision-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .vision-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 1rem;
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .vision-card h4 {
+            margin-bottom: 1rem;
+            color: #ff5c4a;
+        }
+
+        .vision-card p {
+            color: #333;
+        }
+
+        /* Expanded Sections */
+        .vision-stats {
+            background-color: #f1f1f1;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .vision-stats h2 {
+            font-size: 2.5rem;
+            color: #001f3f;
+            margin-bottom: 2rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .stat-boxes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            width: 20%;
+            margin: 1rem;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .stat-box h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff5c4a;
+        }
+
+        .stat-box p {
+            font-size: 1.2rem;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #001f3f;
+            padding: 4rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonial-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff5c4a;
+        }
+
+        .testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            width: 30%;
+            margin: 1rem;
+            background-color: #fff;
+            color: #333;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .testimonial:before {
+            content: '“';
+            font-size: 5rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            color: #ff5c4a;
+        }
+
+        .testimonial p {
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-footer {
+            text-align: right;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: #ff5c4a;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            animation: fadeInUp 2s;
+        }
+
+        .cta-section a {
+            color: white;
+            background-color: #001f3f;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .cta-section a:hover {
+            background-color: white;
+            color: #001f3f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001f3f;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: #ff5c4a;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">HLIS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vision.html">Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Institution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Curriculum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Vision Header Section -->
+    <section class="vision-header">
+        <h1>Our Vision</h1>
+        <p>Shaping future leaders through excellence in education and godly values.</p>
+    </section>
+
+    <!-- Vision Content Section -->
+    <section class="vision-content">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <p>At HLIS, we are committed to nurturing students who excel both academically and spiritually.</p>
+            <div class="vision-cards">
+                <div class="vision-card">
+                    <h4>Academic Excellence</h4>
+                    <p>Our goal is to help students achieve the highest standards of academic success.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>Godly Leadership</h4>
+                    <p>We foster godly leadership qualities, inspiring students to become future leaders in society.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>Integrity and Discipline</h4>
+                    <p>Integrity and discipline are key pillars of our school's mission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Stats Section -->
+    <section class="vision-stats">
+        <div class="container">
+            <h2>Our Impact in Numbers</h2>
+            <div class="stat-boxes">
+                <div class="stat-box">
+                    <h3>500+</h3>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-box">
+                    <h3>50+</h3>
+                    <p>Dedicated Staff</p>
+                </div>
+                <div class="stat-box">
+                    <h3>25+</h3>
+                    <p>Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2>What Our Parents Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"HLIS has transformed my child's academic journey. I'm impressed by their dedication to holistic growth."</p>
+                    <div class="testimonial-footer">- Parent A</div>
+                </div>
+                <div class="testimonial">
+                    <p>"The school's emphasis on both education and spirituality is remarkable. A great environment for growth!"</p>
+                    <div class="testimonial-footer">- Parent B</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I'm grateful for the godly principles taught here, which are essential for my child's future."</p>
+                    <div class="testimonial-footer">- Parent C</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Join Us Today</h2>
+        <a href="admissions.html">Explore Admissions</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Humble Light International School</p>
+            <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

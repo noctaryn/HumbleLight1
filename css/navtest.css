@@ -1,0 +1,105 @@
+/* Custom Navy Background */
+.bg-navy {
+    background-color: #001f3f;
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar Links - Button Style */
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ff5c4a;
+    border-color: #ff5c4a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Custom Button Style */
+.btn-custom {
+    display: inline-block;
+    background-color: #001f3f;
+    border: 2px solid #ff5c4a;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #ff5c4a;
+    color: white;
+    border-color: #001f3f;
+}
+
+/* Hamburger Menu Icon (bars to X) */
+.navbar-toggler-icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Toggle effect for menu icon */
+.navbar-toggler.collapsed .fa-bars {
+    display: inline;
+}
+
+.navbar-toggler:not(.collapsed) .fa-bars {
+    display: none;
+}
+
+.navbar-toggler.collapsed .fa-times {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) .fa-times {
+    display: inline;
+}
+
+/* Mobile View Dropdown Animation */
+.collapse.navbar-collapse {
+    transition: height 0.3s ease, visibility 0.3s ease;
+}
+
+.collapse.navbar-collapse.show {
+    height: auto;
+    visibility: visible;
+}
+
+/* Mobile View Link Styling */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+        background-color: #001f3f;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #ff5c4a;
+        transform: translateY(0);
+    }
+}
